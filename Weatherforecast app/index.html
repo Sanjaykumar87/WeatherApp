@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="weather.jpg">
+    <title>WeatherInfo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="new.css">
+   
+
+</head>
+
+<body>
+    <div class="header">
+    <h1 class="one" >
+        <img src="cloud.jpg" alt="" height="60px" width="60px" > <p>WeatherInfo</p></h1>
+    
+   <div class="search">
+    <div class="inputgroup">
+        <input type="text" id="userlocation" placeholder="Enter a city"  >
+        <i class="fa-solid fa-magnifying-glass-location" id="icon1" onclick="finduserlocation()"></i>
+    </div>
+   </div>
+   <div class="livelocation">
+       <img src="seasons_17484830.gif" alt=" " height="60px" width="60px" style="border-radius: 40px;">
+   </div>
+    </div>
+
+    <div class="container1"><br>
+    <div id="left">
+        <div class="weatherinput">
+            <div class="next">
+                <h2 class="next1text">Now</h2>
+                <div class="weathericon">
+                    <img src="" alt="" id="dimg">
+                </div><br>
+                <div class="temperature"></div>
+                <div class="description"></div><br><hr>
+                <div class="cal">
+                <i class="fa-solid fa-calendar-days" id="calendericon"></i>
+                <div id="date">
+                    
+                </div>
+                </div>
+
+                <div class="loc">
+                <i class="fa-solid fa-location-dot" id="locationicon"></i>
+                <div class="place">
+                    
+                </div> </div><br>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="left">
+
+        <div class="card">
+            <h1 class="text2"> 5 Days Forecasting</h1>
+            <div class="day-forecasting">
+                <div class="forecastitem">
+                    <div class="icon-wrapper">
+                        <div class="align">
+                            <div class="container3">
+                            <div class="onef" id="sub-box">
+                                <div class="box1">
+                                <img src="" alt="" class="img3">
+                                <span id="temp1" class="tempvalue"></span>
+                                </div>
+                                <div class="rem">
+                                <p id="feels1"></p>
+                                <p id="date1"></p>
+                                </div>
+                            </div>
+    
+                            <div class="twof" id="sub-box">
+                                <div class="box1">
+                                <img src="" alt="" class="img4">
+                                <span id="temp2" class="tempvalue"></span>
+                                </div>
+                                <div class="rem">
+                                <p id="feels2"></p>
+                                <p id="date2"></p>
+                                </div>
+                            </div>
+    
+    
+                            <div class="threef" id="sub-box">
+                                <div class="box1">
+                                <img src="" alt=""  class="img5">
+                                <span id="temp3" class="tempvalue"></span>
+                                </div>
+                                <div class="rem">
+                                <p id="feels3"></p>
+                                <p id="date3"></p>
+                                </div>
+                            </div>
+    
+    
+                            <div class="fourf" id="sub-box">
+                                <div class="box1">
+                                <img src="" alt="" class="img6">
+                                <span id="temp4" class="tempvalue"></span>
+                                </div>
+                                <div class="rem">
+                                <p id="feels4"></p>
+                                <p id="date4"></p>
+                                </div>
+                            </div>
+    
+                            <div class="fivef" id="sub-box">
+                                <div class="box1">
+                                <img src="" alt="" class="img7">
+                                <span id="temp5" class="tempvalue"></span>
+                                </div>
+                                <div class="rem">
+                                <p id="feels5"></p>
+                                <p id="date5"></p>
+                                </div>
+                            </div>
+    
+    
+                            <div class="sixf" id="sub-box">
+                                <div class="box1">
+                                <img src="" alt="" class="img8">
+                                <span id="temp6" class="tempvalue"></span>
+                                </div>
+                                <div class="rem">
+                                <p id="feels6"></p>
+                                <p id="date6"></p>
+                                </div>
+                            </div>
+    
+              
+    
+    
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+    <div class="box2">
+    <div class="weatheroutput">
+        <h1 class="heading">Today's Highlights</h1>
+
+        <div class="row1">
+            <div class="val1">
+            <div class="humidity">Humidity
+                <div class="down">
+                <i class="fa-solid fa-water" id="val"></i>
+                <p class="hvalue"></p>
+                </div>
+            </div>
+
+            </div>
+            <div class="sun">
+                <span class="sun1"> 
+                    <i class="fa-solid fa-sun"></i>
+                    <p> Sunrise<br><span id="srvalue"></span></p>
+                </span>
+
+                <span class="sun2">
+                    <i class="fa-regular fa-sun"></i>
+                    <p> Sunset<br><span id="ssvalue"></span></p>
+                </span>
+
+            </div>
+           
+        </div>
+
+        <div class="downbox">
+             <div class="val2">
+            <div class="wind">WindSpeed
+                <div class="down">
+                <i class="fa-solid fa-wind" id="val"></i>
+                <p class="wvalue"></p>
+                </div>
+            </div>
+            </div>
+          <div class="val2">
+            <div class="clouds">Clouds
+                <div class="down">
+                <i class="fa-solid fa-cloud" id="val"></i>
+                <p class="cvalue"></p>
+                </div>
+            </div>
+            </div>
+
+
+
+          
+             <div class="val2">
+            <div class="pressure">Pressure
+                <div class="down">
+                <i class="fa-solid fa-volcano" id="val"></i>
+                <p class="pvalue"></p>
+                </div>
+            </div>
+            </div>
+    </div>
+        </div><br>
+
+    </div>
+    </div>
+
+
+    <div class="box3">
+        <h1 class="text3">Tommorrow's Hourly Forecast</h1>
+        <div class="hourly-forecast">
+            <div class="box4">
+                <div class="sub-box1">
+                <img src="" alt="" class="img9">
+                <div id="htempvalue1"></div></div>
+                <div class="sub-box2">
+                    <div id="date7"></div>
+                <div id="hdescription"></div>
+                </div>
+            </div>
+
+            <div class="box5">
+                <div class="sub-box1">
+                <img src="" alt="" class="img10">
+                <div id="htempvalue2"></div>
+                </div>
+                <div class="sub-box2">
+                <div id="date8"></div>
+                <div id="hdescription1"></div>
+                </div>
+               
+            </div>
+
+            <div class="box6">
+                <div class="sub-box1">
+                <img src="" alt="" class="img11">
+                <div id="htempvalue3"></div>
+                </div>
+                <div class="sub-box2">
+                <div id="date9"></div>
+                <div id="hdescription2"></div>
+                </div>
+                
+            </div>
+
+            <div class="box7">
+                <div class="sub-box1">
+                <img src="" alt="" class="img12">
+                <div id="htempvalue4"></div>
+                </div>
+                <div class="sub-box2">
+                <div id="date10"></div>
+                <div id="hdescription3"></div>
+                </div>
+              
+            </div>
+
+            <div class="box8">
+                <div class="sub-box1">
+                <img src="" alt="" class="img13">
+                <div id="htempvalue5"></div>
+                </div>
+                <div class="sub-box2">
+                <div id="date11"></div>
+                <div id="hdescription4"></div>
+                </div>
+
+            </div>
+
+            <div class="box9">
+                <div class="sub-box1">
+                <img src="" alt="" class="img14">
+                <div id="htempvalue6"></div>
+                </div>
+                <div class="sub-box2">
+                <div id="date12"></div>
+                <div id="hdescription5"></div>
+                </div>
+           
+            </div>
+
+            <div class="box10">
+                <div class="sub-box1">
+                <img src="" alt="" class="img15">
+                <div id="htempvalue7"></div>
+                </div>
+                <div class="sub-box2">
+                <div id="date13"></div>
+                <div id="hdescription6"></div>
+                </div>
+               
+            </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="new.js"></script>
+
+</body>
+
+</html>
